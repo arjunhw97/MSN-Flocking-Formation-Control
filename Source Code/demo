@@ -1,0 +1,101 @@
+
+  plot(nodes,'m>');  
+  for i = 1:n
+    u = nodes(i,1);
+    v = nodes(i,2);
+    for j = 1:n
+      s = nodes(j,1);
+      t = nodes(j,2);
+      [z] = eucld(u,v,s,t);
+      if (u == s) && (v == t)  
+        continue;
+      end
+      if(z <= r)
+        line(nodes(i),nodes(j)); 
+      end
+    end
+  end
+ 
+
+
+
+
+for i = 1:n
+        u = x(i);
+        v = y(i);
+        adj(i,i) = 0;
+        for j = 1:n
+          s = x(j);
+          t = y(j);
+          if (u == s) && (v == t)
+            continue;
+          end
+          [z] = eucld(u,v,s,t);
+          [sig] = signorm(z);
+          [sigr] = signorm(r);
+          if(z < r)
+            adj(i,j) = ph(sig/sigr);   
+            [n1,n2] = nij(u,v,s,t);
+            sum_x(i) = sum_x(i) + (phiialpha(sig,r,d) * n1);
+            (phiialpha(sig,r,d) * n1)
+            sum_y(i) = sum_y(i) + (phiialpha(sig,r,d) * n2);
+            summ_x(i) = summ_x(i) + (adj(i,j) * (p_x(j) - p_x(i)));     
+            summ_y(i) = summ_y(i) + (adj(i,j) * (p_y(j) - p_y(i)));            
+          end
+        end
+  sum_x = c1 * sum_x;
+  sum_y = c1 * sum_y;
+  summ_x = c2 * summ_x;
+  summ_y = c2 * summ_y;
+
+
+
+
+
+
+
+
+
+
+
+
+for i = 1:iter
+    for b1 = 1:n
+       plot(x1(iter,b1),y1(iter,b1),'m<');
+       hold on;
+    end   
+    for j = 1:n
+        u = x1(iter,j);
+        v = y1(iter,j);
+       for m = 1:n
+           s = x1(iter,m);
+           t = y1(iter,m);
+           if((u == s)&&(v == t) )
+             continue;
+           end
+           [z] = eucld(u,v,s,t);
+           if(z <= r)             
+           end
+       end
+    end
+end   
+
+
+  u = x(i);
+  v = y(i);
+  adj(i,i) = 0;
+  for j = 1:n
+    s = x(j);
+    t = y(j);
+    if (u == s) && (v == t)
+      continue;
+    end
+    [z] = eucld(u,v,s,t);
+    [sig] = signorm(z);
+    [sigr] = signorm(r);
+    if(z <= r)
+      adj(i,j) = ph(sig/sigr);   
+      plot([u s],[v t],'b');
+      hold on;
+	end
+  end
