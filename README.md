@@ -2,6 +2,10 @@
 
 **Checkout the paper at [Flocking Control](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.121.7027&rep=rep1&type=pdf)** before reading the file.
 
+## Installation
+
+Install the latest verison of MATLAB in your system, copy the directory "source code" to your MATLAB directory or any other directory and open and run any of the files - MSN1.m, MSN2.m, MSN3.m, MSN4.m, MSN5.m for the 5 cases explained below respectively.
+ 
 ## Project parameters:
 - Number of sensor nodes: n =100.
 - Space dimensions: m = 2.
