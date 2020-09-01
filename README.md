@@ -1,5 +1,6 @@
 #  MSN Flocking Formation Control
 
+**Checkout the paper at [Flocking Control](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.121.7027&rep=rep1&type=pdf)** before reading the file.
 
 ## Project parameters:
 - Number of sensor nodes: n =100.
