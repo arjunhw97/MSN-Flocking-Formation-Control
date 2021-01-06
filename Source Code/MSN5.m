@@ -29,7 +29,7 @@ x = rand(n,1).*50;
 y = rand(n,1).*50;
 qtarg(:) = [300,25]; %Position of the target
 [x,y,neigh] = compute(x,y,r,n,neigh); %Computing neighbors of nodes
-plotgraphtarg(x,y,neigh,n,qtarg); %plotting the nodes and the target and connecting the nodes
+plotgraphtarg(x,y,neigh,n,qtarg, yk, Kr); %plotting the nodes and the target and connecting the nodes
 
 %Declaring variables required for movement of the nodes
 old_x = x;
